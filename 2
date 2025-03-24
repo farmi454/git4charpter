@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    float tc;
+
+    printf("Vvedite temperaturu v celsiyax: ");
+    scanf("%f", &tc); // ввод цельсий
+
+    float tf = (tc * 9 / 5) + 32; // Конвертируем температуру из цельсий в форенгейты
+
+    printf("Ctf = %.2f ; tf = %.2f\n", tc, tf); // Вывод ответа с двум знаками после заптой
+    
+    return 0;
+}
