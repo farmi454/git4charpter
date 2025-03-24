@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int is_power_of_two(unsigned int n) {
+    // Используем битовое И для проверки
+    return (n != 0) && ((n & (n - 1)) == 0);
+}
+
+int main() {
+    // Переменная для хранения числа
+    unsigned int num;
+
+    // Запрашиваем число у пользователя
+    printf("Введите целое число: ");
+    scanf("%u", &num);
+
+    // Проверяем, является ли число степенью двойки
+    if (is_power_of_two(num)) {
+        printf("%u — степень двойки.\n", num);
+    } else {
+        printf("%u — не степень двойки.\n", num);
+    }
+
+    return 0;
+}
